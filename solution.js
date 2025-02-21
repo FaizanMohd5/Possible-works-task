@@ -6,14 +6,13 @@ const testCases = ["ip1.json", "ip2.json"];
 testCases.forEach((file, index) => {
     console.log(`\nProcessing Test Case ${index + 1}...`);
 
-    // Check if file exists
+    // verify file exists
     if (!fs.existsSync(file)) {
         console.error(`Error: ${file} not found.`);
         return;
     }
 
     try {
-        // Read and parse JSON file
         const data = JSON.parse(fs.readFileSync(file, "utf-8"));
 
         if (!data.keys || typeof data.keys.n === "undefined" || typeof data.keys.k === "undefined") {
@@ -21,7 +20,7 @@ testCases.forEach((file, index) => {
             return;
         }
 
-        // Extract values
+        // get values
         const { n, k } = data.keys;
         let points = [];
 
