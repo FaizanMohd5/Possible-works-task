@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // List of JSON test case files
-const testCases = ["input1.json", "input2.json"];
+const testCases = ["ip1.json", "ip2.json"];
 
 testCases.forEach((file, index) => {
     console.log(`\nProcessing Test Case ${index + 1}...`);
